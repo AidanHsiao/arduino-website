@@ -1,0 +1,77 @@
+@use "../../styles/colors";
+
+.header {
+  width: 100vw;
+  height: 800px;
+  display: flex;
+  align-items: flex-end;
+  background-color: hsl(217, 94%, 3%);
+}
+
+.headerBackground {
+  position: absolute;
+  @extend .header;
+  background-image: url("../../public/bgidk.jpg");
+  background-size: cover;
+  background-position-y: center;
+  filter: brightness(0.5);
+  transform: translateX(500px);
+}
+
+.sidebar {
+  width: 450px;
+  padding-top: 160px;
+  height: 100%;
+  margin-left: 16vw;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.titleDivider {
+  width: 15%;
+  min-height: 5px;
+  margin-block: 3% 5%;
+  animation: gradient 10s linear infinite;
+  background-size: 300%;
+  background-image: linear-gradient(
+    to right,
+    colors.$neon-blue,
+    colors.$neon-pink,
+    colors.$neon-blue
+  );
+}
+
+.headerDivider {
+  width: 100vw;
+  aspect-ratio: 1920/200;
+  background-image: url("../../public/divider1.svg");
+  background-size: cover;
+  filter: brightness(0.5);
+}
+
+.title {
+  @extend .titleDivider;
+  width: auto;
+  height: auto;
+  font-size: 3rem;
+  font-weight: 600;
+  color: transparent;
+  background-clip: text;
+}
+
+@keyframes gradient {
+  from {
+    background-position-x: 0%;
+  }
+  to {
+    background-position-x: -300%;
+  }
+}
+
+.subtitle {
+  font-weight: 200;
+  font-size: 1.6rem;
+  color: #ccc;
+  text-shadow: 2px 2px 5px #ccc;
+}

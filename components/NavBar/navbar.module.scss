@@ -1,0 +1,58 @@
+.navbar {
+  position: fixed;
+  width: 100vw;
+  height: 100px;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  color: #eee;
+  transition: background-color 0.3s;
+}
+
+.logo {
+  width: 40vw;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 3rem;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.buttons {
+  margin-left: auto;
+  margin-right: 12vw;
+  width: 25vw;
+  height: 70%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navButton {
+  width: auto;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  &::after {
+    content: "";
+    position: absolute;
+    transform: translateY(20px);
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.5s ease-in-out;
+  }
+  &:hover::after {
+    width: 90%;
+  }
+}
+
+.navBG {
+  @extend .navbar;
+  z-index: 999;
+}
