@@ -20,6 +20,8 @@ a {
 
 * {
   box-sizing: border-box;
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {

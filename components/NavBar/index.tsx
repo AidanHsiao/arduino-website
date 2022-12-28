@@ -1,27 +1,31 @@
 import { useEffect, useState } from "react";
 import styles from "./navbar.module.scss";
 
-const navbarColor = "#2f3466";
-
 export default function NavBar() {
-  const [bgVisible, setBGVisibility] = useState(false);
+  const [visible, setVisibility] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      setBGVisibility(window.scrollY > 50);
+      setVisibility(window.scrollY > 10);
     });
   }, []);
 
   return (
-    <nav
-      className={styles.navbar}
-      style={{ backgroundColor: bgVisible ? navbarColor : "transparent" }}
-    >
-      <div className={styles.logo}>elysikomi prod.</div>
+    <nav className={styles.navbar} style={{ top: visible ? -80 : 0 }}>
+      <div className={styles.logo}>funny games</div>
       <div className={styles.buttons}>
-        <div className={styles.navButton}>Home</div>
-        <div className={styles.navButton}>Why Am I Here</div>
-        <div className={styles.navButton}>EndmeNow</div>
+        <a className={styles.navButton} href="#circuit">
+          Circuit
+        </a>
+        <a className={styles.navButton} href="#state">
+          State
+        </a>
+        <a className={styles.navButton} href="#final">
+          Final Design
+        </a>
+        <a className={styles.navButton} href="#code">
+          Code
+        </a>
       </div>
     </nav>
   );

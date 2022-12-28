@@ -22,12 +22,11 @@ export default function Header() {
           </div>
           <div className={styles.titleDivider}></div>
           <div className={styles.subtitle}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
+            Using an Arduino UNO and some components, we attempted to
+            reconstruct a standard vertical scrolling rhythm game using the
+            skills we acquired from this class. Below details our process and
+            thought process in making the final product (that didn't end up
+            working out).
           </div>
         </div>
       </header>

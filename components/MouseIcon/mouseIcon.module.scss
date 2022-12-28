@@ -12,6 +12,7 @@
   flex-direction: column;
   animation: glow 1.5s linear infinite;
   transition: opacity 0.5s;
+  pointer-events: none;
 }
 
 @keyframes glow {

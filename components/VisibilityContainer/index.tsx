@@ -11,7 +11,7 @@ interface VisibilityContainerProps {
 export default function VisibilityContainer(props: VisibilityContainerProps) {
   const { ref, inView } = useInView({
     triggerOnce: props.triggerOnce || false,
-    threshold: props.threshold || 1,
+    threshold: props.threshold || 0.6,
   });
   return (
     <div ref={ref} style={{ opacity: +inView }} className={styles.container}>
