@@ -25,7 +25,7 @@ export default function Header() {
             Using an Arduino UNO and some components, we attempted to
             reconstruct a standard vertical scrolling rhythm game using the
             skills we acquired from this class. Below details our process and
-            thought process in making the final product (that didn't end up
+            thought process in making the final product (that didn&apos;t end up
             working out).
           </div>
         </div>

@@ -63,7 +63,7 @@ export default function Home() {
             style={{ height: codeVisible ? "auto" : "0px" }}
           >
             {code.map((item) => (
-              <div>{item}</div>
+              <div key={Math.random() * Math.random()}>{item}</div>
             ))}
           </div>
         </div>
